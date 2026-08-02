@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#061A40;
+color:white;
+}
+
+/* Navbar */
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(5,15,45,.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#d1b307;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:.3s;
+font-weight:500;
+}
+
+nav ul li a:hover{
+color:#FFD700;
+}
+
+/* Home */
+
+#home{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:120px 8%;
+}
+
+.content{
+max-width:600px;
+}
+
+.content h3{
+font-size:24px;
+}
+
+.content h1{
+font-size:60px;
+color:#FFD700;
+margin:10px 0;
+}
+
+.content h2{
+color:#6CB4EE;
+margin-bottom:20px;
+}
+
+.content p{
+line-height:28px;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#FFD700;
+color:#061A40;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+margin-right:15px;
+transition:.4s;
+}
+
+.btn:hover{
+background:white;
+}
+
+.btn2{
+display:inline-block;
+padding:15px 35px;
+border:2px solid #FFD700;
+color:#FFD700;
+text-decoration:none;
+border-radius:30px;
+transition:.4s;
+}
+
+.btn2:hover{
+background:#FFD700;
+color:#061A40;
+}
+
+.photo img{
+width:350px;
+height:350px;
+border-radius:50%;
+border:6px solid #FFD700;
+object-fit:cover;
+box-shadow:0 0 35px gold;
+}
+
+/* Sections */
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#FFD700;
+}
+
+/* About */
+
+.about-box{
+background:#0D2B68;
+padding:40px;
+border-radius:15px;
+line-height:30px;
+box-shadow:0 0 20px rgba(255,215,0,.3);
+}
+
+/* Skills */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#0D2B68;
+padding:25px;
+text-align:center;
+border-radius:15px;
+font-weight:bold;
+transition:.4s;
+}
+
+.skill:hover{
+background:#FFD700;
+color:#061A40;
+transform:translateY(-10px);
+}
+
+/* Projects */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.project{
+background:#0D2B68;
+padding:30px;
+border-radius:15px;
+transition:.4s;
+}
+
+.project:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px gold;
+}
+
+.project h3{
+color:#FFD700;
+margin-bottom:15px;
+}
+
+/* Contact */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:15px;
+font-size:18px;
+}
+
+.social{
+margin-top:20px;
+}
+
+.social a{
+font-size:30px;
+color:#FFD700;
+margin:15px;
+transition:.3s;
+}
+
+.social a:hover{
+color:white;
+}
+
+footer{
+background:#04102E;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+#home{
+flex-direction:column;
+text-align:center;
+}
+
+.photo{
+margin-top:40px;
+}
+
+.photo img{
+width:260px;
+height:260px;
+}
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav ul li{
+margin:10px;
+}
+
+.content h1{
+font-size:45px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">PORTFOLIO</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section id="home">
+
+<div class="content">
+
+<h3>Hello, I'm</h3>
+
+<h1>ABINAYA R</h1>
+
+<h2>Artificial Intelligence & Data Science Student</h2>
+
+<p>
+Passionate about Artificial Intelligence, Machine Learning,
+Deep Learning and Full Stack Development.
+I enjoy building innovative projects and solving real-world problems.
+</p>
+
+<a href="#" class="btn">Hire Me</a>
+
+<a href="resume.pdf" class="btn2" download>Download Resume</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="about-box">
+
+I am an Artificial Intelligence & Data Science student with a strong interest in AI,
+Machine Learning, Python, Web Development, and Data Analytics.
+I enjoy learning new technologies and creating impactful projects.
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+
+<div class="skill">Machine Learning</div>
+
+<div class="skill">Deep Learning</div>
+
+<div class="skill">HTML</div>
+
+<div class="skill">CSS</div>
+
+<div class="skill">JavaScript</div>
+
+<div class="skill">Flask</div>
+
+<div class="skill">SQL</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>Digestion Detection Application</h3>
+
+<p>Flask-based complaint portal with login, dashboard and location tracking.</p>
+
+</div>
+
+<div class="project">
+
+<h3>Battery Guard App</h3>
+
+<p>Professional resume generator using HTML, CSS and JavaScript.</p>
+
+</div>
+
+<div class="project">
+
+<h3>Portfolio Website</h3>
+
+<p>Responsive modern portfolio with premium blue and gold theme.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<div class="contact">
+
+<p><i class="fa-solid fa-envelope"></i> abinayaradhakrishnan47@gmail.com</p>
+
+<p><i class="fa-solid fa-phone"></i> +91 9025621066</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p>
+
+<div class="social">
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="#"><i class="https://www.linkedin.com/in/abinaya-r-a21298396?utm_source=share_via&utm_content=profile&utm_medium=member_android"></i></a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Your Name | Designed with 💙 & ⭐
+
+</footer>
+
+</body>
+</html>
