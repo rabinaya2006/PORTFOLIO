@@ -1,435 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professional Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Waste Separator</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#061A40;
-color:white;
-}
-
-/* Navbar */
-
-nav{
-position:fixed;
-width:100%;
-top:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:rgba(5,15,45,.95);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-.logo{
-font-size:30px;
-font-weight:bold;
-color:#d1b307;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-}
-
-nav ul li{
-margin-left:25px;
-}
-
-nav ul li a{
-text-decoration:none;
-color:white;
-transition:.3s;
-font-weight:500;
-}
-
-nav ul li a:hover{
-color:#FFD700;
-}
-
-/* Home */
-
-#home{
-min-height:100vh;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:120px 8%;
-}
-
-.content{
-max-width:600px;
-}
-
-.content h3{
-font-size:24px;
-}
-
-.content h1{
-font-size:60px;
-color:#FFD700;
-margin:10px 0;
-}
-
-.content h2{
-color:#6CB4EE;
-margin-bottom:20px;
-}
-
-.content p{
-line-height:28px;
-margin-bottom:35px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#FFD700;
-color:#061A40;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-margin-right:15px;
-transition:.4s;
-}
-
-.btn:hover{
-background:white;
-}
-
-.btn2{
-display:inline-block;
-padding:15px 35px;
-border:2px solid #FFD700;
-color:#FFD700;
-text-decoration:none;
-border-radius:30px;
-transition:.4s;
-}
-
-.btn2:hover{
-background:#FFD700;
-color:#061A40;
-}
-
-.photo img{
-width:350px;
-height:350px;
-border-radius:50%;
-border:6px solid #FFD700;
-object-fit:cover;
-box-shadow:0 0 35px gold;
-}
-
-/* Sections */
-
-section{
-padding:90px 8%;
-}
-
-.title{
-text-align:center;
-font-size:40px;
-margin-bottom:50px;
-color:#FFD700;
-}
-
-/* About */
-
-.about-box{
-background:#0D2B68;
-padding:40px;
-border-radius:15px;
-line-height:30px;
-box-shadow:0 0 20px rgba(255,215,0,.3);
-}
-
-/* Skills */
-
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-}
-
-.skill{
-background:#0D2B68;
-padding:25px;
-text-align:center;
-border-radius:15px;
-font-weight:bold;
-transition:.4s;
-}
-
-.skill:hover{
-background:#FFD700;
-color:#061A40;
-transform:translateY(-10px);
-}
-
-/* Projects */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.project{
-background:#0D2B68;
-padding:30px;
-border-radius:15px;
-transition:.4s;
-}
-
-.project:hover{
-transform:scale(1.05);
-box-shadow:0 0 20px gold;
-}
-
-.project h3{
-color:#FFD700;
-margin-bottom:15px;
-}
-
-/* Contact */
-
-.contact{
-text-align:center;
-}
-
-.contact p{
-margin:15px;
-font-size:18px;
-}
-
-.social{
-margin-top:20px;
-}
-
-.social a{
-font-size:30px;
-color:#FFD700;
-margin:15px;
-transition:.3s;
-}
-
-.social a:hover{
-color:white;
-}
-
-footer{
-background:#04102E;
-text-align:center;
-padding:25px;
-margin-top:40px;
-}
-
-/* Responsive */
-
-@media(max-width:900px){
-
-#home{
-flex-direction:column;
-text-align:center;
-}
-
-.photo{
-margin-top:40px;
-}
-
-.photo img{
-width:260px;
-height:260px;
-}
-
-nav{
-flex-direction:column;
-}
-
-nav ul{
-margin-top:15px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-nav ul li{
-margin:10px;
-}
-
-.content h1{
-font-size:45px;
-}
-
-}
-
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
+    <header>
+        <div>
+            <h1>♻️ AI Smart Waste Separator</h1>
+            <p>Real-Time Waste Monitoring & Automatic Segregation</p>
+        </div>
+
+        <div class="system-status">
+            <span class="dot"></span>
+            System Online
+        </div>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#ai">AI Vision</a>
+        <a href="#bins">Waste Bins</a>
+        <a href="#sensors">Sensors</a>
+        <a href="#solar">Solar</a>
+    </nav>
 
-<div class="logo">PORTFOLIO</div>
+    <main id="dashboard">
 
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+        <!-- SUMMARY CARDS -->
+        <section class="summary">
 
-</nav>
+            <div class="card">
+                <h3>Total Waste</h3>
+                <h2 id="totalWaste">128 kg</h2>
+                <p>Today</p>
+            </div>
 
-<section id="home">
+            <div class="card">
+                <h3>Recyclable</h3>
+                <h2 id="recyclable">82 kg</h2>
+                <p>64% of total</p>
+            </div>
 
-<div class="content">
+            <div class="card">
+                <h3>Waste Processed</h3>
+                <h2 id="processed">96</h2>
+                <p>Items today</p>
+            </div>
 
-<h3>Hello, I'm</h3>
+            <div class="card">
+                <h3>Energy</h3>
+                <h2>78%</h2>
+                <p>Solar Battery</p>
+            </div>
 
-<h1>ABINAYA R</h1>
+        </section>
 
-<h2>Artificial Intelligence & Data Science Student</h2>
 
-<p>
-Passionate about Artificial Intelligence, Machine Learning,
-Deep Learning and Full Stack Development.
-I enjoy building innovative projects and solving real-world problems.
-</p>
+        <!-- AI VISION -->
+        <section id="ai" class="section">
 
-<a href="#" class="btn">Hire Me</a>
+            <div class="section-title">
+                <h2>🤖 AI Camera & CNN Classification</h2>
+                <span>LIVE CAMERA</span>
+            </div>
 
-<a href="resume.pdf" class="btn2" download>Download Resume</a>
+            <div class="ai-container">
 
-</div>
+                <div class="camera-box">
 
+                    <div id="cameraPreview">
+                        <div class="camera-icon">📷</div>
+                        <p>Upload waste image</p>
+                    </div>
 
-</div>
+                    <input
+                        type="file"
+                        id="imageInput"
+                        accept="image/*"
+                    >
 
-</section>
+                    <button onclick="runAI()">
+                        Run AI Classification
+                    </button>
 
-<section id="about">
+                </div>
 
-<h2 class="title">About Me</h2>
 
-<div class="about-box">
+                <div class="classification">
 
-I am an Artificial Intelligence & Data Science student with a strong interest in AI,
-Machine Learning, Python, Web Development, and Data Analytics.
-I enjoy learning new technologies and creating impactful projects.
+                    <h3>Detection Result</h3>
 
-</div>
+                    <div class="result">
+                        <p>Category</p>
+                        <h2 id="category">Unknown</h2>
+                    </div>
 
-</section>
+                    <div class="result">
+                        <p>CNN Confidence</p>
 
-<section id="skills">
+                        <div class="progress">
+                            <div
+                                class="progress-bar"
+                                id="confidenceBar"
+                                style="width:0%">
+                            </div>
+                        </div>
 
-<h2 class="title">Skills</h2>
+                        <h3 id="confidence">0%</h3>
+                    </div>
 
-<div class="skills">
+                    <div class="result">
+                        <p>Status</p>
+                        <h3 id="aiStatus">Waiting for image...</h3>
+                    </div>
 
-<div class="skill">Python</div>
+                </div>
 
-<div class="skill">Machine Learning</div>
+            </div>
 
-<div class="skill">Deep Learning</div>
+        </section>
 
-<div class="skill">HTML</div>
 
-<div class="skill">CSS</div>
+        <!-- MOISTURE + RECYCLABILITY -->
+        <section class="two-column">
 
-<div class="skill">JavaScript</div>
+            <div class="panel">
 
-<div class="skill">Flask</div>
+                <h2>💧 Moisture Verification</h2>
 
-<div class="skill">SQL</div>
+                <div class="sensor-value">
+                    <span id="moistureValue">32%</span>
+                </div>
 
-</div>
+                <p>Moisture Level</p>
 
-</section>
+                <div class="progress">
+                    <div
+                        class="progress-bar"
+                        id="moistureBar"
+                        style="width:32%">
+                    </div>
+                </div>
 
-<section id="projects">
+                <h3 id="moistureStatus">DRY</h3>
 
-<h2 class="title">Projects</h2>
+            </div>
 
-<div class="projects">
 
-<div class="project">
+            <div class="panel">
 
-<h3>Digestion Detection Application</h3>
+                <h2>♻️ Recyclability Analysis</h2>
 
-<p>Flask-based complaint portal with login, dashboard and location tracking.</p>
+                <div class="recycle-status" id="recycleStatus">
+                    Recyclable
+                </div>
 
-</div>
+                <p id="recycleReason">
+                    Material can be processed for recycling.
+                </p>
 
-<div class="project">
+            </div>
 
-<h3>Battery Guard App</h3>
+        </section>
 
-<p>Professional resume generator using HTML, CSS and JavaScript.</p>
 
-</div>
+        <!-- AUTOMATIC SEGREGATION -->
+        <section class="section">
 
-<div class="project">
+            <div class="section-title">
+                <h2>⚙️ Automatic Segregation</h2>
+                <span id="motorStatus">MOTOR READY</span>
+            </div>
 
-<h3>Portfolio Website</h3>
+            <div class="conveyor">
 
-<p>Responsive modern portfolio with premium blue and gold theme.</p>
+                <div class="belt">
 
-</div>
+                    <div class="waste-item" id="wasteItem">
+                        ♻️
+                    </div>
 
-</div>
+                </div>
 
-</section>
+                <div class="diverter">
+                    ↓
+                </div>
 
-<section id="contact">
+            </div>
 
-<h2 class="title">Contact</h2>
+            <p class="center">
+                AI detects waste → Motor activates → Waste is directed to correct bin
+            </p>
 
-<div class="contact">
+        </section>
 
-<p><i class="fa-solid fa-envelope"></i> abinayaradhakrishnan47@gmail.com</p>
 
-<p><i class="fa-solid fa-phone"></i> +91 9025621066</p>
+        <!-- WASTE BINS -->
+        <section id="bins" class="section">
 
-<p><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p>
+            <div class="section-title">
+                <h2>🗑️ Smart Waste Bins</h2>
+                <span>ULTRASONIC MONITORING</span>
+            </div>
 
-<div class="social">
+            <div class="bins-container">
 
-<a href="#"><i class="fab fa-github"></i></a>
+                <div class="bin">
+                    <h3>Plastic</h3>
+                    <div class="bin-icon">🧴</div>
 
-<a href="#"><i class="https://www.linkedin.com/in/abinaya-r-a21298396?utm_source=share_via&utm_content=profile&utm_medium=member_android"></i></a>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:72%"></div>
+                    </div>
 
-</div>
+                    <p>72% Filled</p>
+                    <span class="status almost">Almost Full</span>
+                </div>
 
-</div>
 
-</section>
+                <div class="bin">
+                    <h3>Paper</h3>
+                    <div class="bin-icon">📄</div>
 
-<footer>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:45%"></div>
+                    </div>
 
-© 2026 Your Name | Designed with 💙 & ⭐
+                    <p>45% Filled</p>
+                    <span class="status normal">Normal</span>
+                </div>
 
-</footer>
+
+                <div class="bin">
+                    <h3>Metal</h3>
+                    <div class="bin-icon">🥫</div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:58%"></div>
+                    </div>
+
+                    <p>58% Filled</p>
+                    <span class="status normal">Normal</span>
+                </div>
+
+
+                <div class="bin">
+                    <h3>Glass</h3>
+                    <div class="bin-icon">🍾</div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:35%"></div>
+                    </div>
+
+                    <p>35% Filled</p>
+                    <span class="status normal">Normal</span>
+                </div>
+
+
+                <div class="bin">
+                    <h3>Organic</h3>
+                    <div class="bin-icon">🍎</div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:86%"></div>
+                    </div>
+
+                    <p>86% Filled</p>
+                    <span class="status full">Almost Full</span>
+                </div>
+
+
+                <div class="bin">
+                    <h3>E-Waste</h3>
+                    <div class="bin-icon">🔋</div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:28%"></div>
+                    </div>
+
+                    <p>28% Filled</p>
+                    <span class="status normal">Normal</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SENSORS -->
+        <section id="sensors" class="two-column">
+
+            <div class="panel">
+
+                <h2>📡 IoT Sensor Status</h2>
+
+                <div class="sensor-row">
+                    <span>Ultrasonic Sensor</span>
+                    <b class="online">ONLINE</b>
+                </div>
+
+                <div class="sensor-row">
+                    <span>Moisture Sensor</span>
+                    <b class="online">ONLINE</b>
+                </div>
+
+                <div class="sensor-row">
+                    <span>Servo Motor</span>
+                    <b class="online">ONLINE</b>
+                </div>
+
+                <div class="sensor-row">
+                    <span>MQTT Connection</span>
+                    <b class="online">CONNECTED</b>
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <h2>🚛 Collection Prediction</h2>
+
+                <h3>Next Collection</h3>
+
+                <div class="prediction">
+                    Tomorrow - 10:30 AM
+                </div>
+
+                <p>
+                    Organic waste bin may reach full capacity soon.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOLAR -->
+        <section id="solar" class="section">
+
+            <div class="section-title">
+                <h2>☀️ Solar Power System</h2>
+                <span>CHARGING</span>
+            </div>
+
+            <div class="solar-container">
+
+                <div>
+                    <h3>Battery Level</h3>
+
+                    <div class="big-progress">
+                        <div class="solar-bar">
+                            78%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solar-info">
+                    <p>☀️ Solar Input: <b>420 W</b></p>
+                    <p>🔋 Battery: <b>78%</b></p>
+                    <p>⚡ Power Usage: <b>185 W</b></p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REWARD -->
+        <section class="reward">
+
+            <h2>🏆 Smart Recycling Rewards</h2>
+
+            <p>
+                Points earned through responsible waste segregation
+            </p>
+
+            <div class="points">
+                1,250 Points
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>AI Smart Waste Separator | College Project Demo</p>
+        <p>Powered by CNN • IoT • Sensors • Solar Energy</p>
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
